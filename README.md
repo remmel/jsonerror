@@ -1,5 +1,7 @@
 # jsonerror
 
+json_decode cannot decode "[]" or "["Львів (Lviv)"]" string. It throws a "Syntax error" message. Error seems to comes from encoded file which starts with the hex "efbb bf"
+
 ```shell script
 ~/workspace/jsonerror$ php test.php
 ______ /fine_lviv.json ______
@@ -28,4 +30,12 @@ Same error with "[]" json (fine_empty.json and wrong_empty.json). The wrong file
 
 ~/workspace/jsonerror$ xxd wrong_empty.json
 00000000: efbb bf5b 5d                             ...[]
+```
+
+
+See the problem by yourself:
+```shell script
+git clone git@github.com:remmel/jsonerror.git
+cd jsonerror
+php test.php
 ```
