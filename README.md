@@ -2,6 +2,8 @@
 
 json_decode cannot decode "[]" or "["Львів (Lviv)"]" string. It throws a "Syntax error" message. Error seems to comes from encoded file which starts with the hex "efbb bf"
 
+Stackoverflow question : https://stackoverflow.com/questions/57409964/json-decode-cannot-decode
+
 ```shell script
 ~/workspace/jsonerror$ php test.php
 ______ /fine_lviv.json ______
